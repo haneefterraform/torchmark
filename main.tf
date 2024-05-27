@@ -12,7 +12,7 @@ resource "aws_instance" "windows" {
     iops        = 3000
     throughput  = 125
     volume_size = 30
-    delete_on_termination = false
+    delete_on_termination = true
     tags = local.common_tags_dev
 }
 }
