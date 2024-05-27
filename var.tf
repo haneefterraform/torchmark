@@ -10,8 +10,8 @@ variable "ami" {
     default = "mankfndk17717"
 }
 variable "size" {
-    type = int
-    default = 41
+    type = string
+    default = "41"
 }
 
 
