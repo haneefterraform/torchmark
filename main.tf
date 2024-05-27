@@ -19,7 +19,7 @@ resource "aws_instance" "windows" {
 
 resource "aws_ebs_volume" "datadrive1" {
   availability_zone = "us-east-1a"
-  size = 40
+  size = var.size
   type = "gp3"
   tags = local.common_tags_dev
 
