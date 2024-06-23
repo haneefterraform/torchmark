@@ -38,9 +38,7 @@ resource "aws_ebs_volume" "datadrives" {
      Name = "servername_datadisk${count.index}"
       
    
-    Label =  aws_ebs_volume.datadrives[0] == "servername_datadisk1" ? "temp" : "kjk"
-       depends_on = [
-      aws_ebs_volume.datadrives.count
+   
   ]
 }
      
