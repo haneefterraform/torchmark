@@ -41,7 +41,7 @@ variable "subnet" {
 
 variable "securitygroup" {
   type    = list(string)
-  default = ["sg-0a4fe4ebbcbc0d8ff", "sg-02cc3a69f72a00982"]
+  default = ["sg-0b8476fc14e480396"]
 
 }
 
