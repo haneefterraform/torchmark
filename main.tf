@@ -3,11 +3,14 @@ provider "aws" {
   region = var.region
 
 }
+
+data "aws_vpc" "existing" {
+  vpc_id = var.vpc_id
+}
 resource "aws_instance" "windows" {
   ami                    = data.aws_ami.windows.id
   instance_type          = var.instance_type
   key_name               = var.keyname
-  vpc_id                 = var.vpc_id
   subnet_id              = var.subnet
   vpc_security_group_ids = var.securitygroup
   #tags                   = local.common_tags_dev
