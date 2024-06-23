@@ -28,7 +28,7 @@ variable "keyname" {
   default     = "testing"
 
 }
-variable "vpc" {
+variable "vpc_id" {
   type    = string
   default = "vpc-0168ac5f2a65b55f7"
 
