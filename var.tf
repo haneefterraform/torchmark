@@ -28,10 +28,14 @@ variable "keyname" {
   default     = "testing"
 
 }
+variable "vpc" {
+  type    = string
+  default = "vpc-0168ac5f2a65b55f7"
 
+}
 variable "subnet" {
   type    = string
-  default = "subnet-07a389cc2ad2d24f7"
+  default = "	subnet-00b41a3b220d5cdd2"
 
 }
 
