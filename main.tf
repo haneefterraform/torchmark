@@ -39,7 +39,7 @@ resource "aws_ebs_volume" "datadrives" {
       
    
    
-  ]
+  
 }
      
 
