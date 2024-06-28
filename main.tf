@@ -3,7 +3,7 @@ provider "aws" {
   region = var.region
 
 }
-
+/*
 resource "aws_network_interface" "foo" {
   subnet_id = var.subnet
   private_ips = ["10.0.1.22"]
@@ -11,6 +11,8 @@ resource "aws_network_interface" "foo" {
     Name = "primary_network_interface"
   }
 }
+
+*/
 resource "aws_instance" "windows" {
   ami                    = data.aws_ami.windows.id
   instance_type          = var.instance_type
@@ -20,10 +22,6 @@ resource "aws_instance" "windows" {
   disable_api_termination =  var.deleteontermination
   #tags                   = local.common_tags_dev
   tags = var.env == "dev" ? local.common_tags_dev : local.common_tags_prd
- network_interface {
-     network_interface_id = "${aws_network_interface.foo.id}"
-     device_index = 0
-  }
 }
 
 
