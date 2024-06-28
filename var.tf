@@ -25,7 +25,7 @@ variable "size" {
 variable "keyname" {
   type        = string
   description = "variable for declaring keypair"
-  default     = "testing"
+  default     = "windowsjune"
 
 }
 variable "vpc_id" {
@@ -35,13 +35,13 @@ variable "vpc_id" {
 }
 variable "subnet" {
   type    = string
-  default = "	subnet-00b41a3b220d5cdd2"
+  default = "subnet-046b7ebb8f1490e0d"
 
 }
 
 variable "securitygroup" {
   type    = list(string)
-  default = ["sg-0b8476fc14e480396"]
+  default = ["sg-0307401aac8ee913f"]
 
 }
 
