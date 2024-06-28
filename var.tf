@@ -21,6 +21,10 @@ variable "size" {
   default = "41"
 }
 
+variable "deleteontermination" {
+  type    = bool
+  default = "false"
+}
 
 variable "keyname" {
   type        = string
