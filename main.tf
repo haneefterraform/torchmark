@@ -22,7 +22,7 @@ resource "aws_instance" "windows" {
   disable_api_termination =  var.deleteontermination
   #tags                   = local.common_tags_dev
   tags = var.env == "dev" ? local.common_tags_dev : local.common_tags_prd
-}
+
 
 
   root_block_device {
