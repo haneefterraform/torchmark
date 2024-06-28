@@ -17,7 +17,7 @@ resource "aws_instance" "windows" {
   key_name               = var.keyname
   subnet_id              = var.subnet
   vpc_security_group_ids = var.securitygroup
-  disable_api_termination = true
+  disable_api_termination =  var.deleteontermination
   #tags                   = local.common_tags_dev
   tags = var.env == "dev" ? local.common_tags_dev : local.common_tags_prd
  network_interface {
