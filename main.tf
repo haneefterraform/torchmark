@@ -4,9 +4,7 @@ provider "aws" {
 
 }
 
-data "aws_vpc" "existing" {
-  vpc_id = var.vpc_id
-}
+
 resource "aws_instance" "windows" {
   ami                    = data.aws_ami.windows.id
   instance_type          = var.instance_type
